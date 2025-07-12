@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - Login</title>
+  <link href="../src/style.css" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="auth-section">
+    <h2>🔐 Admin Login</h2>
+    <form id="login-form">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Log In</button>
+    </form>
+  </div>
+
+  <div id="dashboard-section" style="display:none">
+    <h1>🧴 SkincareGlow Admin Dashboard</h1>
+    <button id="logout-btn">Logout</button>
+
+    <form id="product-form">
+      <input type="text" id="name" placeholder="Product Name" required />
+      <input type="number" id="price" placeholder="Price" required />
+      <input type="file" id="image" accept="image/*" required />
+      <button type="submit">Add Product</button>
+    </form>
+
+    <div id="loading">Loading products...</div>
+    <table id="product-table">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script type="module" src="../src/js/admin.js"></script>
+</body>
+</html>
